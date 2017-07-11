@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.sakumar.thirdi.RatingActivity"
+    android:visibility="visible"
+    android:paddingBottom="16dp">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button3"
+        android:height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linear"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:text="Area"
+            android:id="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            android:textColor="#212121" />
+
+        <Spinner
+            android:layout_height="match_parent"
+
+            android:layout_width="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/shape2"
+            android:layout_margin="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+
+            android:popupBackground="#FFFFFF"
+
+    />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/linear"
+        android:padding="16dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating on Patrolling"
+            android:id="@+id/textView"
+            android:layout_toLeftOf="@+id/ratingBar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/ratingBar2"
+            android:layout_alignBottom="@+id/textView3"
+            android:textSize="25dp"
+            android:textColor="#212121"
+            android:enabled="false" />
+
+        <RatingBar
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_above="@+id/ratingBar"
+            android:visibility="visible"
+            android:paddingLeft="48dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safety at night"
+            android:id="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/ratingBar"
+            android:layout_toStartOf="@+id/ratingBar"
+            android:layout_alignBottom="@+id/ratingBar"
+            android:layout_below="@+id/ratingBar2"
+            android:textSize="25dp"
+            android:textColor="#212121" />
+
+        <RatingBar
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar3"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/textView"
+            android:layout_alignRight="@+id/ratingBar"
+            android:layout_alignEnd="@+id/ratingBar"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:paddingLeft="48dp"
+            android:numStars="5"
+            android:theme="@style/RatingBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall"
+            android:id="@+id/textView4"
+            android:layout_toLeftOf="@id/ratingBar3"
+            android:layout_below="@id/textView3"
+            android:layout_alignBottom="@+id/ratingBar3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="25dp"
+            android:textColor="#212121" />
+
+        <RatingBar
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:rating="0"
+            android:stepSize="1"
+            android:focusableInTouchMode="false"
+            android:textAlignment="inherit"
+            android:transitionName="gregg"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:layout_centerVertical="true"
+            android:paddingLeft="48dp"
+            android:numStars="5"
+            android:theme="@style/RatingBar" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal"
+            android:editable="true"
+            android:hint="comments"
+            android:layout_weight="0.46"
+            android:background="@drawable/shape"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
